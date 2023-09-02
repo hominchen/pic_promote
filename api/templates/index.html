@@ -1,0 +1,409 @@
+{% extends 'base.html' %}
+
+{% block title %}提示詞{% endblock %}
+
+{% block content %}
+    <div class="total_prompt">
+        <h2>你所選的提示詞：</h2>
+        {% if total_prompt %}
+            {% for prompt in total_prompt %}
+                {{ prompt }}, 
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br><br>
+
+    <h1>選擇提示詞(Enter送出)</h1>
+    <hr>
+    <form method="POST" action="/">
+        <h2>01.動物</h2>
+        <div>
+            <input type="checkbox" value="cat" name="mycheckbox">貓, 
+            <input type="checkbox" value="dog" name="mycheckbox">狗, 
+            <input type="checkbox" value="rabbit" name="mycheckbox">兔子, 
+            <input type="checkbox" value="duckling" name="mycheckbox">小鴨, 
+            <input type="checkbox" value="pig" name="mycheckbox">豬, 
+            
+            <input type="checkbox" value="sheep" name="mycheckbox">羊, 
+            <input type="checkbox" value="horse" name="mycheckbox">馬, 
+            <input type="checkbox" value="monkey" name="mycheckbox">猴子, 
+            <input type="checkbox" value="lion" name="mycheckbox">獅子, 
+            <input type="checkbox" value="elephant" name="mycheckbox">大象, 
+            
+            <input type="checkbox" value="bear" name="mycheckbox">熊, 
+            <input type="checkbox" value="lamb" name="mycheckbox">綿羊, 
+            <input type="checkbox" value="mouse" name="mycheckbox">鼠, 
+            <input type="checkbox" value="dolphin" name="mycheckbox">海豚, 
+            <input type="checkbox" value="panda" name="mycheckbox">熊貓, 
+
+            <input type="checkbox" value="tiger" name="mycheckbox">老虎, 
+            <input type="checkbox" value="gorilla" name="mycheckbox">猩猩, 
+            <input type="checkbox" value="giraffe" name="mycheckbox">長頸鹿, 
+            <input type="checkbox" value="zebra" name="mycheckbox">斑馬, 
+            <input type="checkbox" value="antelope" name="mycheckbox">羚羊, 
+            
+            <input type="checkbox" value="kangaroo" name="mycheckbox">袋鼠, 
+            <input type="checkbox" value="sea lion" name="mycheckbox">海獅, 
+            <input type="checkbox" value="walrus" name="mycheckbox">海象, 
+            <input type="checkbox" value="dolphin" name="mycheckbox">海豚, 
+            <input type="checkbox" value="butterfly" name="mycheckbox">蝴蝶, 
+            
+            <input type="checkbox" value="bee" name="mycheckbox">蜜蜂, 
+            <input type="checkbox" value="owl" name="mycheckbox">貓頭鷹, 
+            <input type="checkbox" value="peacock" name="mycheckbox">孔雀
+        </div>
+
+        <hr>
+        <h2>02.動漫</h2>
+        <div>
+            <input type="checkbox" value="tanjiro kamado" name="mycheckbox">竈門炭治郎, 
+            <input type="checkbox" value="kamado nezuko" name="mycheckbox">禰豆子, 
+            <input type="checkbox" value="agatsuma zenitsu" name="mycheckbox">伊之助, 
+            <input type="checkbox" value="tomioka giyuu" name="mycheckbox">富岡義勇, 
+            <input type="checkbox" value="one piece,monkey d. luffy" name="mycheckbox">路飛, 
+
+            <input type="checkbox" value="roronoa zoro" name="mycheckbox">索隆, 
+            <input type="checkbox" value="nami" name="mycheckbox">娜美, 
+            <input type="checkbox" value="nico robin" name="mycheckbox">羅賓, 
+            <input type="checkbox" value="attack on titan,eren yeager" name="mycheckbox">艾連·葉卡, 
+            <input type="checkbox" value="mikasa ackerman" name="mycheckbox">米卡莉斯, 
+
+            <input type="checkbox" value="naruto uzumaki" name="mycheckbox">漩渦鳴人, 
+            <input type="checkbox" value="sasuke uchiha" name="mycheckbox">宇智波佐助, 
+            <input type="checkbox" value="kudo shinichi" name="mycheckbox">柯南, 
+            <input type="checkbox" value="mouri ran" name="mycheckbox">毛利蘭, 
+            <input type="checkbox" value="haibara ai" name="mycheckbox">灰原哀, 
+            
+            <input type="checkbox" value="yoshida ayumi" name="mycheckbox">吉田步美, 
+            <input type="checkbox" value="dragon ball,son goku" name="mycheckbox">孫悟空, 
+            <input type="checkbox" value="son gohan" name="mycheckbox">孫悟飯, 
+            <input type="checkbox" value="shenron" name="mycheckbox">神龍, 
+            <input type="checkbox" value="frieza" name="mycheckbox">弗利沙
+        </div>
+
+        <hr>
+        <h2>03.交通工具</h2>
+        <div>
+            <input type="checkbox" value="Motorcycle" name="mycheckbox">摩托車, 
+            <input type="checkbox" value="Bus" name="mycheckbox">公車, 
+            <input type="checkbox" value="Ship" name="mycheckbox">輪船, 
+            <input type="checkbox" value="Train" name="mycheckbox">火車, 
+            <input type="checkbox" value="Airplane" name="mycheckbox">飛機, 
+            <input type="checkbox" value="Helicopter" name="mycheckbox">直升機, 
+            <input type="checkbox" value="Tram" name="mycheckbox">輕軌列車, 
+            <input type="checkbox" value="Bicycle" name="mycheckbox">自行車, 
+            <input type="checkbox" value="Electric Scooter" name="mycheckbox">電動滑板車, 
+            <input type="checkbox" value="Wheelchair" name="mycheckbox">輪椅, 
+            <input type="checkbox" value="Submarine" name="mycheckbox">潛水艇, 
+            <input type="checkbox" value="Electric Wheelchair" name="mycheckbox">電動輪椅, 
+            <input type="checkbox" value="High-Speed Train" name="mycheckbox">高鐵, 
+            <input type="checkbox" value="Hot Air Balloon" name="mycheckbox">熱氣球, 
+            <input type="checkbox" value="Rocket" name="mycheckbox">火箭, 
+            <input type="checkbox" value="Fire Truck" name="mycheckbox">消防車, 
+            <input type="checkbox" value="Police Car" name="mycheckbox">警察車, 
+            <input type="checkbox" value="Ambulance" name="mycheckbox">救護車, 
+            <input type="checkbox" value="Tow Truck" name="mycheckbox">拖吊車, 
+            <input type="checkbox" value=Vehicle Transporter"" name=mycheckbox>車輛運輸車
+        </div>
+
+        <hr>
+        <h2>04.表情</h2>
+        <div>
+            <input type="checkbox" value="Happy" name="mycheckbox">快樂的, 
+            <input type="checkbox" value="Sad" name="mycheckbox">悲傷的, 
+            <input type="checkbox" value="Angry" name="mycheckbox">生氣的, 
+            <input type="checkbox" value="Scared" name="mycheckbox">害怕的, 
+            <input type="checkbox" value="Relaxed" name="mycheckbox">放鬆的, 
+            <input type="checkbox" value="Nervous" name="mycheckbox">緊張的, 
+            <input type="checkbox" value="Surprised" name="mycheckbox">驚訝的, 
+            <input type="checkbox" value="Anxious" name="mycheckbox">焦慮的, 
+            <input type="checkbox" value="Tired" name="mycheckbox">疲倦的, 
+            <input type="checkbox" value="Excited" name="mycheckbox">興奮的, 
+            <input type="checkbox" value="Bored" name="mycheckbox">厭煩的, 
+            <input type="checkbox" value="Embarrassed" name="mycheckbox">羞愧的, 
+            <input type="checkbox" value="Dull" name="mycheckbox">無聊的, 
+            <input type="checkbox" value="Ecstatic" name="mycheckbox">狂喜的, 
+            <input type="checkbox" value="Confused" name="mycheckbox">困惑的, 
+            <input type="checkbox" value="Content" name="mycheckbox">幸福的, 
+            <input type="checkbox" value="Restless" name="mycheckbox">焦急的, 
+            <input type="checkbox" value="Worried" name="mycheckbox">焦慮的, 
+            <input type="checkbox" value="Curious" name="mycheckbox">好奇的, 
+            <input type="checkbox" value="Joyful" name="mycheckbox">喜悅的
+        </div>
+
+        <hr>
+        <h2>05.服裝</h2>
+        <div>
+            <input type="checkbox" value="Shirt" name="mycheckbox">襯衫, 
+            <input type="checkbox" value="Dress" name="mycheckbox">裙子, 
+            <input type="checkbox" value="Suit" name="mycheckbox">西裝, 
+            <input type="checkbox" value="Sweatshirt" name="mycheckbox">運動衫, 
+            <input type="checkbox" value="Jeans" name="mycheckbox">牛仔褲, 
+            <input type="checkbox" value="T-shirt" name="mycheckbox">T恤, 
+            <input type="checkbox" value="Jacket" name="mycheckbox">外套, 
+            <input type="checkbox" value="Vest" name="mycheckbox">背心, 
+            <input type="checkbox" value="Gown" name="mycheckbox">洋裝, 
+            <input type="checkbox" value="Sweater" name="mycheckbox">毛衣, 
+            <input type="checkbox" value="Pants" name="mycheckbox">褲子, 
+            <input type="checkbox" value="Pajamas" name="mycheckbox">睡衣, 
+            <input type="checkbox" value="Swimsuit" name="mycheckbox">泳衣, 
+            <input type="checkbox" value="Coat" name="mycheckbox">大衣, 
+            <input type="checkbox" value="Shorts" name="mycheckbox">短褲, 
+            <input type="checkbox" value="Trousers" name="mycheckbox">西裝褲
+        </div>
+
+        <hr>
+        <h2>06.背景</h2>
+        <div>
+            <input type="checkbox" value="School" name="mycheckbox">學校, 
+            <input type="checkbox" value="Church" name="mycheckbox">教堂, 
+            <input type="checkbox" value="Castle" name="mycheckbox">城堡, 
+            <input type="checkbox" value="Greenhouse" name="mycheckbox">溫室, 
+            <input type="checkbox" value="Farmhouse" name="mycheckbox">農舍, 
+            <input type="checkbox" value="Villa" name="mycheckbox">別墅, 
+            <input type="checkbox" value="Campsite Tent" name="mycheckbox">營地帳篷, 
+            <input type="checkbox" value="Tower" name="mycheckbox">塔樓, 
+            <input type="checkbox" value="Window" name="mycheckbox">窗戶, 
+            <input type="checkbox" value="Roof" name="mycheckbox">屋頂, 
+            <input type="checkbox" value="Balcony" name="mycheckbox">陽台, 
+            <input type="checkbox" value="Stairs" name="mycheckbox">樓梯, 
+            <input type="checkbox" value="Glass Curtain Wall" name="mycheckbox">玻璃幕牆, 
+            <input type="checkbox" value="Rooftop Garden" name="mycheckbox">頂樓花園, 
+            <input type="checkbox" value="Party Tent" name="mycheckbox">聚會帳篷, 
+            <input type="checkbox" value="Ruins" name="mycheckbox">廢墟, 
+            <input type="checkbox" value="Bunker" name="mycheckbox">碉堡, 
+            <input type="checkbox" value="Spire" name="mycheckbox">尖塔, 
+            <input type="checkbox" value="Inn" name="mycheckbox">旅店, 
+            <input type="checkbox" value="Shack" name="mycheckbox">棚屋, 
+            <input type="checkbox" value="Hot Spring Resort" name="mycheckbox">溫泉旅館, 
+            <input type="checkbox" value="Arch" name="mycheckbox">拱門, 
+            <input type="checkbox" value="Skyscraper" name="mycheckbox">大樓, 
+            <input type="checkbox" value="Pavilion" name="mycheckbox">亭子, 
+            <input type="checkbox" value="Cave" name="mycheckbox">山洞, 
+            <input type="checkbox" value="Cottage" name="mycheckbox">木屋, 
+            <input type="checkbox" value="Train Station" name="mycheckbox">火車站, 
+            <input type="checkbox" value="Stone House" name="mycheckbox">石屋, 
+            <input type="checkbox" value="Market Stall" name="mycheckbox">市場攤位, 
+            <input type="checkbox" value="Harbor Dock" name="mycheckbox">港口碼頭, 
+            <input type="checkbox" value="stary night blue black" name="mycheckbox">星夜藍黑
+        </div>
+
+        <hr>
+        <h2>07.頭髮顏色</h2>
+        <div>
+            <input type="checkbox" value="Black hair" name="mycheckbox">黑色頭髮, 
+            <input type="checkbox" value="Brown hair" name="mycheckbox">棕色頭髮, 
+            <input type="checkbox" value="Blonde hair" name="mycheckbox">金色頭髮, 
+            <input type="checkbox" value="Red hair" name="mycheckbox">紅色頭髮, 
+            <input type="checkbox" value="Silver hair" name="mycheckbox">銀色頭髮, 
+            <input type="checkbox" value="Blue hair" name="mycheckbox">藍色頭髮, 
+            <input type="checkbox" value="Green hair" name="mycheckbox">綠色頭髮, 
+            <input type="checkbox" value="Pink hair" name="mycheckbox">粉紅色頭髮, 
+            <input type="checkbox" value="Gray hair" name="mycheckbox">灰色頭髮, 
+            <input type="checkbox" value="White hair" name="mycheckbox">白色頭髮, 
+            <input type="checkbox" value="Orange hair" name="mycheckbox">橙色頭髮, 
+            <input type="checkbox" value="Purple hair" name="mycheckbox">紫色頭髮, 
+            <input type="checkbox" value="Caramel hair" name="mycheckbox">焦糖色頭髮, 
+            <input type="checkbox" value="Copper hair" name="mycheckbox">銅色頭髮, 
+            <input type="checkbox" value="Olive hair" name="mycheckbox">橄欖色頭髮, 
+            <input type="checkbox" value="Tea Brown hair" name="mycheckbox">茶色頭髮, 
+            <input type="checkbox" value="Chestnut hair" name="mycheckbox">栗色頭髮, 
+            <input type="checkbox" value="Turquoise hair" name="mycheckbox">青色頭髮, 
+            <input type="checkbox" value="Peach hair" name="mycheckbox">桃紅色頭髮, 
+            <input type="checkbox" value="Champagne hair" name="mycheckbox">香檳色頭髮
+        </div>
+
+        <hr>
+        <h2>08.場景</h2>
+        <div>
+            <input type="checkbox" value="Sun" name="mycheckbox">太陽, 
+            <input type="checkbox" value="Blue sky" name="mycheckbox">藍天, 
+            <input type="checkbox" value="White clouds" name="mycheckbox">白雲, 
+            <input type="checkbox" value="Forest" name="mycheckbox">森林, 
+            <input type="checkbox" value="Grassland" name="mycheckbox">草地, 
+            <input type="checkbox" value="Ocean" name="mycheckbox">海洋, 
+            <input type="checkbox" value="River" name="mycheckbox">河流, 
+            <input type="checkbox" value="Mountain range" name="mycheckbox">山脈, 
+            <input type="checkbox" value="Garden" name="mycheckbox">花園, 
+            <input type="checkbox" value="Beach" name="mycheckbox">沙灘, 
+            <input type="checkbox" value="Lake" name="mycheckbox">湖泊, 
+            <input type="checkbox" value="Waterfall" name="mycheckbox">瀑布, 
+            <input type="checkbox" value="Starry sky" name="mycheckbox">星空, 
+            <input type="checkbox" value="Fishing port" name="mycheckbox">漁港, 
+            <input type="checkbox" value="Plateau" name="mycheckbox">高原, 
+            <input type="checkbox" value="Hot spring" name="mycheckbox">溫泉, 
+            <input type="checkbox" value="Desert" name="mycheckbox">沙漠, 
+            <input type="checkbox" value="Glacier" name="mycheckbox">冰川, 
+            <input type="checkbox" value="Island" name="mycheckbox">島嶼, 
+            <input type="checkbox" value="Meadow" name="mycheckbox">原野, 
+            <input type="checkbox" value="City park" name="mycheckbox">城市公園, 
+            <input type="checkbox" value="Valley" name="mycheckbox">山谷, 
+            <input type="checkbox" value="Wetland" name="mycheckbox">濕地, 
+            <input type="checkbox" value="Flower field" name="mycheckbox">花海, 
+            <input type="checkbox" value="Forest trail" name="mycheckbox">森林小徑, 
+            <input type="checkbox" value="Steppe" name="mycheckbox">草原, 
+            <input type="checkbox" value="Sandy beach" name="mycheckbox">溫暖的海灘, 
+            <input type="checkbox" value="Forest lake" name="mycheckbox">森林湖泊, 
+            <input type="checkbox" value="Blue bay" name="mycheckbox">藍色海灣, 
+            <input type="checkbox" value="Castle garden" name="mycheckbox">城堡花園, 
+            <input type="checkbox" value="Coffee plantation" name="mycheckbox">咖啡農場, 
+            <input type="checkbox" value="Farmland" name="mycheckbox">田野, 
+            <input type="checkbox" value="Canyon" name="mycheckbox">峽谷, 
+            <input type="checkbox" value="Volcano" name="mycheckbox">火山, 
+            <input type="checkbox" value="Waterway" name="mycheckbox">航道, 
+            <input type="checkbox" value="Forest stream" name="mycheckbox">森林溪流, 
+            <input type="checkbox" value="Snow-capped mountain" name="mycheckbox">雪山, 
+            <input type="checkbox" value="Gorge" name="mycheckbox">溪谷, 
+            <input type="checkbox" value="Forest lake" name="mycheckbox">森林湖泊, 
+            <input type="checkbox" value="Glacial lake" name="mycheckbox">冰河湖
+        </div>
+
+        <hr>
+        <h2>09.中國繪畫風格</h2>
+        <div>
+            <input type="checkbox" value="Ink wash painting style" name="mycheckbox">水墨畫風, 
+            <input type="checkbox" value="Gongbi painting style" name="mycheckbox">工筆畫風, 
+            <input type="checkbox" value="Xieyi painting style" name="mycheckbox">寫意畫風, 
+            <input type="checkbox" value="Ba Da Shan Ren painting style" name="mycheckbox">八大山人畫風, 
+            <input type="checkbox" value="Loreum School of Painting" name="mycheckbox">龍門畫派, 
+            <input type="checkbox" value="Southern School painting style" name="mycheckbox">南宗畫風, 
+            <input type="checkbox" value="Northern School painting style" name="mycheckbox">北宗畫風, 
+            <input type="checkbox" value="Flower-and-bird painting style" name="mycheckbox">花鳥畫風, 
+            <input type="checkbox" value="Landscape painting style" name="mycheckbox">山水畫風, 
+            <input type="checkbox" value="Figure painting style" name="mycheckbox">人物畫風
+        </div>
+
+        <hr>
+        <h2>10.繪畫風格</h2>
+        <div>
+            <input type="checkbox" value="Anime style" name="mycheckbox">動漫風格, 
+            <input type="checkbox" value="Realism" name="mycheckbox">現實主義, 
+            <input type="checkbox" value="Abstract art" name="mycheckbox">抽象畫, 
+            <input type="checkbox" value="Impressionism" name="mycheckbox">筆觸風格, 
+            <input type="checkbox" value="Pointillism" name="mycheckbox">點綴風格, 
+            <input type="checkbox" value="Oil painting" name="mycheckbox">油畫, 
+            <input type="checkbox" value="Watercolor painting" name="mycheckbox">水彩畫, 
+            <input type="checkbox" value="Sketch" name="mycheckbox">素描, 
+            <input type="checkbox" value="Quick sketch" name="mycheckbox">速寫, 
+            <input type="checkbox" value="Geometric abstraction" name="mycheckbox">幾何抽象, 
+            <input type="checkbox" value="Cubism" name="mycheckbox">立體主義, 
+            <input type="checkbox" value="Pop art" name="mycheckbox">波普藝術, 
+            <input type="checkbox" value="Ink wash painting" name="mycheckbox">水墨畫, 
+            <input type="checkbox" value="Neo-expressionism" name="mycheckbox">新表現主義, 
+            <input type="checkbox" value="Surrealism" name="mycheckbox">超現實主義, 
+            <input type="checkbox" value="Cartoon style" name="mycheckbox">卡通風格, 
+            <input type="checkbox" value="Mixed media art" name="mycheckbox">融媒體繪畫, 
+            <input type="checkbox" value="Black and white art" name="mycheckbox">黑白畫, 
+            <input type="checkbox" value="Calligraphy art" name="mycheckbox">文字藝術, 
+            <input type="checkbox" value="Street art" name="mycheckbox">街頭藝術, 
+            <input type="checkbox" value="splash arts" name="mycheckbox">飛濺藝術, 
+            <input type="checkbox" value="Watercolor Clipart" name="mycheckbox">水彩剪貼畫, 
+            <input type="checkbox" value="universe style" name="mycheckbox">宇宙風格, 
+            <input type="checkbox" value="art style of Studio Ghibli concept art" name="mycheckbox">吉卜力藝術風格, 
+            <input type="checkbox" value="sticker sheet" name="mycheckbox">貼紙, 
+            <input type="checkbox" value="aesthetic for Tshirt design" name="mycheckbox">T 卹設計的美學
+        </div>
+
+        <hr>
+        <h2>11.提升畫質</h2>
+        <div>
+            <input type="checkbox" value="professional photographer" name="mycheckbox" checked>專業攝影師, 
+            <input type="checkbox" value="captured with professional DSLR camera" name="mycheckbox" checked>使用專業數碼單反相機拍攝, 
+            <input type="checkbox" value="4K resolution" name="mycheckbox" checked>4K畫質, 
+            <input type="checkbox" value="ultra detailed" name="mycheckbox" checked>超詳細, 
+            <input type="checkbox" value="perfect composition" name="mycheckbox" checked>完美的構圖, 
+            <input type="checkbox" value="presented in a stunning landscape view" name="mycheckbox" checked>以令人驚嘆呈現, 
+            <input type="checkbox" value="masterpiece,detailed,highres:1.4" name="mycheckbox" checked>傑出畫質, 
+            <input type="checkbox" value="vibrant color" name="mycheckbox" checked>色彩鮮艷, 
+            <input type="checkbox" value="fractal details" name="mycheckbox" checked>分形細節, 
+            <input type="checkbox" value="sharp focus" name="mycheckbox" checked>聚焦
+        </div>
+
+        <hr>
+        <h2>12.人物細節描繪</h2>
+        <div>
+            <input type="checkbox" value="depth of field" name="mycheckbox">景深, 
+            <input type="checkbox" value="sunlight fractal details" name="mycheckbox">陽光分形細節, 
+            <input type="checkbox" value="detailed gorgeous face" name="mycheckbox">細緻華麗的臉, 
+            <input type="checkbox" value="face is covered by highly detailed" name="mycheckbox">臉部精緻特寫, 
+            <input type="checkbox" value="A beautiful perfect skin" name="mycheckbox">美麗完美的肌膚, 
+            <input type="checkbox" value="all natural looking human skin" name="mycheckbox">人類皮膚, 
+            <input type="checkbox" value="extremely detailed light brown eyes" name="mycheckbox">極其細緻的淺棕色眼睛, 
+            <input type="checkbox" value="full body" name="mycheckbox">全身, 
+            <input type="checkbox" value="mesmerizing legs" name="mycheckbox">漂亮的腿
+        </div>
+        <br><br>
+
+        <input type="submit">
+
+        <hr>
+        <h2>13.反義詞</h2>
+        <div>
+            <details>
+                <summary><b>模組一</b></summary>
+                <p>nude, nsfw, text, letters, too many feet, too many fingers, (((2 heads))), duplicate, abstract, disfigured, deformed, toy, figure, framed, disfigured, bad art, deformed, poorly drawn, extra limbs, weird colors, 2 heads, long neck, elongated body, cropped image, out of frame, draft, deformed hands, twisted fingers, double image, malformed hands, multiple heads, extra limb, ugly, poorly drawn hands, missing limb, cut-off, over satured, grain, lowères, bad anatomy, poorly drawn face, mutation, mutated, floating limbs, disconnected limbs, out of focus, long body, disgusting, extra fingers, groos proportions, missing arms, mutated hands, cloned face, missing legs,</p>
+            </details>
+            <br>
+
+            <details>
+                <summary><b>模組二</b></summary>
+                <p>two heads, two faces, plastic, too long neck, Deformed, blurry, bad anatomy, bad eyes, crossed eyes, disfigured, poorly drawn face, mutation, mutated, ((extra limb)), ugly, poorly drawn hands, missing limb, blurry, floating limbs, disconnected limbs, malformed hands, blur, out of focus, long neck, long body, ((((mutated hands and fingers)))), (((out of frame))), blender, doll, cropped, low-res, close-up, poorly-drawn face, out of frame double, ugly, disfigured, too many fingers, deformed, repetitive, black and white, grainy, extra limbs, bad anatomy, smooth skin, deformed, extra limbs, extra fingers, mutated hands, bad proportions, blind, bad eyes, ugly eyes, dead eyes, out of shot, out of focus, monochrome, noisy, text, writing, logo, oversaturation, over shadow</p>
+            </details>
+            <br>
+            
+            <details>
+                <summary><b>模組三</b></summary>
+                <p>close up, long ears, , two faces, disfigured, ugly, poorly-drawn face, out of frame double, two heads, long body, blurred, ugly, plastic, Deformed, blurry, bad anatomy, bad eyes, crossed eyes, poorly drawn hands, missing limb, blurry, poorly drawn face, mutation, mutated, ((extra limb)), floating limbs, (big boobs), disconnected limbs,, malformed hands, blur, out of focus, long neck, long body, ((((mutated hands and fingers)))), (((out of frame))), blender, doll, cropped,mutated hands, bad anatomy, bad proportions, low-res, close-up, disfigured, too many fingers, deformed, repetitive, black and white, grainy, extra limbs, bad anatomy,High pass filter, airbrush, portrait, zoomed, soft light, smooth skin, closeup, deformed, extra limbs, extra fingers, , blind, bad eyes, ugly eyes, dead eyes, blur, vignette, out of shot, out of focus, gaussian, closeup, monochrome, grainy, noisy, text, writing, watermark, logo, oversaturation ,</p>
+            </details>
+            <br>
+            
+            <details>
+                <summary><b>模組四</b></summary>
+                <p>cartoon, 2d, sketch, drawing, anime, open mouth, nudity, naked, nsfw, helmet, head gear, close up, blurry eyes, two heads, two faces, plastic, Deformed, blurry, bad anatomy, bad eyes, crossed eyes, disfigured, poorly drawn face, mutation, mutated, extra limb, ugly, poorly drawn hands, missing limb, blurry, floating limbs, disconnected limbs, malformed hands, blur, out of focus, long neck, long body, mutated hands and fingers, out of frame, blender, doll, cropped, low-res, close-up, poorly-drawn face, out of frame double, blurred, ugly, disfigured, too many fingers, deformed, repetitive, black and white, grainy, extra limbs, bad anatomyHigh pass filter, airbrush, zoomed, soft light, deformed, extra limbs, extra fingers, mutated hands, bad anatomy, bad proportions , blind, bad eyes, ugly eyes, dead eyes, blur, vignette, out of shot, out of focus, gaussian, closeup, monochrome, grainy, noisy, text, writing, watermark, logo, oversaturation,over saturation,over shadow</p>
+            </details>
+            <br>
+            
+            <details>
+                <summary><b>模組五</b></summary>
+                <p>text, blurry, crossed eyes, ugly, bizarre, poorly drawn, poorly drawn face, poorly drawn hands, poorly drawn limbs, poorly drawn fingers, out of frame, body out of frame, deformed, disfigured, mutation, mutated hands, mutated limbs. mutated face, malformed, malformed limbs, extra fingers, extra limbs, floating limbs, disconnected limbs, missing limbs, blurry, bad anatomy, blurred, watermark, grainy, cut off, draft, duplicate, coppy, multi, two faces, kitsch, over-saturated, grain, low-res, blur, out of focus, long neck, long body, disgusting, childish, mutilated, mangled, old, heterochromia, dots, bad quality, weapons, elongated body, 2 faces, cropped image, out of focus, big hair, twisted fingers, double image, long neck, multiple heads, ugly, over- saturated, disgusting, disgust, childish, mangled, mutilated, bad proportions, gross proportions, morbid, cloned face, fused fingers, too many fingers, artifacts, muted colors, dripping paint, cropped image, double image, surreal, cl</p>
+            </details>
+            <br>
+            
+            <details>
+                <summary><b>模組六</b></summary>
+                <p>(((2 heads))), (((2 face))), (((duplicate))), ((malformed hand)), ((deformed arm)), ((freckle)), naked, man, men, blurry, abstract, deformed, thick eyebrows, cartoon, animated, toy, figure, framed, 3d, cartoon, bad art, deformed, poorly drawn, extra limbs, close up, weird colors, blurry, watermark, blur haze, long neck, watermark, elongated body, cropped image, out of frame, draft, (((deformed hands))), ((twisted fingers)), double image, ((malformed hands)), multiple heads, extra limb, ugly, ((poorly drawn hands)), missing limb, cut-off, grain, bad anatomy, poorly drawn face, mutation, mutated, floating limbs, disconnected limbs, out of focus, long body, disgusting, extra fingers, (weird figure), missing arms, mutated hands, cloned face, missing legs, long neck</p>
+            </details>
+            <br>
+            
+            <details>
+                <summary><b>模組七</b></summary>
+                <p>mislocated eyes, blind eyes, messed up eyes, eyes not straight, close up, face shot, open mouth, clothes, portrait, cartoon style, not realistic, mislocated arms,multiple faces, multiple heads, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, out of frame, ugly, extra limbs, bad anatomy, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, mutated hands, fused fingers, too many fingers, long neck, deformed, ugly, disfigured, blurry, pixelated, hideous, indistinct, old, twisted, contorted, malformed, extra hands, extra arms, joined misshapen, collage, grainy, low, poor, monochrome, huge, out of frame, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, ugly, blurry, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, out of frame, gross proportions, malformed limbs,</p>
+            </details>
+            <br>
+            
+            <details>
+                <summary><b>模組八</b></summary>
+                <p>double body, double face, double features, incorrect posture, long legs, close up, two heads, two faces, plastic, Deformed, blurry, bad anatomy, bad eyes, crossed eyes, disfigured, poorly drawn face, mutation, mutated, extra limb, ugly, poorly drawn hands, missing limb, blurry, floating limbs, disconnected limbs, malformed hands, blur, out of focus, long neck, long body, mutated hands and fingers, out of frame, long fingers, blender, doll, cropped, low-res, close-up, poorly-drawn face, out of frame double, two heads, blurred, ugly, disfigured, too many fingers, deformed, repetitive, black and white, grainy, extra limbs, bad anatomy, High pass filter, airbrush, portrait, zoomed, soft light, smooth skin, closeup, deformed, extra limbs, extra fingers, mutated hands, bad anatomy, bad proportions , blind, bad eyes, ugly eyes, dead eyes, blur, vignette, out of shot, out of focus, gaussian, anime, deformation, mutation</p>
+            </details>
+            <br>
+            
+            <details>
+                <summary><b>模組九</b></summary>
+                <p>mature content, double body, double face, double features, incorrect posture, long legs, close up, ((two heads)), two faces, plastic, pregnant, Deformed belly, deformed, blurry, bad anatomy, bad eyes, crossed eyes, disfigured, poorly drawn face, mutation, mutated, ((extra limb)), ugly, ((poorly drawn hands)), missing limb, blurry, floating limbs, disconnected limbs, malformed hands, blur, out of focus, long neck, long body, (((mutated hands and fingers))), (((out of frame))), long fingers, blender, doll, cropped, low-res, close-up, poorly-drawn face, out of frame double, two heads, blurred, ugly, disfigured, too many fingers, deformed, repetitive, black and white, grainy, extra limbs, bad anatomy, High pass filter, airbrush, portrait, zoomed, soft light, smooth skin, closeup, deformed, ((extra limbs)), ((extra fingers)), (((mutated hands))), bad anatomy, bad proportions , blind, bad eyes, ugly eyes, dead eyes, blur, vignette, out of shot, out of focus, gaussian,</p>
+            </details>
+        </div>
+        
+    </form>
+    <br><br>
+
+    <hr>
+    <div class="total_prompt">
+        <h2>你所選的提示詞：</h2>
+        {% if total_prompt %}
+            {% for prompt in total_prompt %}
+                {{ prompt }}, 
+            {% endfor %}
+        {% endif %}
+    </div>
+
+{% endblock %}
